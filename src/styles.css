@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@layer base {
+  body {margin:0;background:#071422;color:#b5c7d7;font:16px/1.6 Nunito,system-ui,sans-serif;overflow-wrap:anywhere}
+  :focus-visible {outline:2px solid #63beff;outline-offset:3px}
+  button {cursor:pointer} button:disabled {cursor:not-allowed;opacity:.45}
+  nav button {border:1px solid #37516b;border-radius:.5rem;padding:.45rem .8rem}
+}
+@layer components {
+  .cover {height:260px;display:flex;justify-content:center;align-items:flex-start;padding-top:55px;background:radial-gradient(ellipse at center,#102940 0%,#0d2032 55%,transparent 85%),repeating-linear-gradient(160deg,transparent 0 20px,#18334a 21px,transparent 23px 32px),#0b1c2c}
+  .panel {@apply rounded-xl bg-[#0e1d2b] p-6 shadow-xl shadow-black/10 sm:p-8}
+  .action {@apply inline-flex items-center gap-1 text-xs font-bold tracking-widest text-sky-400 uppercase hover:underline}
+  .meta {@apply flex flex-wrap gap-x-5 gap-y-2 text-sm text-slate-300}
+  .meta span {@apply inline-flex items-center gap-2}
+  .meta svg {@apply size-4 text-slate-400}
+  .prose > * + * {margin-top:1.1rem}
+  .prose :is(h1,h2,h3,h4) {font-weight:700;color:#edf5fa;line-height:1.35}
+  .prose h1 {font-size:1.8rem}.prose h2 {font-size:1.5rem}.prose h3 {font-size:1.2rem}
+  .prose ul {list-style:disc}.prose ol {list-style:decimal}.prose :is(ul,ol){padding-left:1.5rem}
+  .prose a {color:#6fc2ff;text-decoration:underline}.prose code {background:#172a3c;padding:.12em .3em;border-radius:4px}
+  .prose pre {background:#112131;padding:1rem;border-radius:8px;overflow-x:auto}.prose pre code {background:none;padding:0}
+  .prose blockquote {border-left:3px solid #398cd4;padding-left:1rem}
+}
